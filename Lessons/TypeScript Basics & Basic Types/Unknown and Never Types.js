@@ -1,3 +1,4 @@
+"use strict";
 var userInput;
 var userName;
 userInput = 5;
@@ -8,6 +9,9 @@ if (typeof userInput === "string") {
     userName = userInput;
 }
 //this function does not return nothing, it never returns
+//the inferred type would be void because never wasn't build into TS at the beginning
+//can leave it as void but you can make it really clear by setting it as never
+////this improves code readability
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
