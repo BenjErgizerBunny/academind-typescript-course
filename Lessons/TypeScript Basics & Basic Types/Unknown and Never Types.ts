@@ -16,7 +16,7 @@ if (typeof userInput === "string") {
 //can leave it as void but you can make it really clear by setting it as never
 ////this improves code readability
 function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
+  throw { message: message, errorCode: code };  
 }
 
 const result = generateError("An error occured", 500);
